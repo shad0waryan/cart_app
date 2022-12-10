@@ -1,6 +1,7 @@
 import { useState, useEffect, MutableRefObject } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { useRef } from "react";
+import Image from "next/image";
 
 import {
   AiOutlineMinusCircle,
@@ -38,7 +39,7 @@ const Navbar = ({
         onClick={toggleCart}
         className="flex flex-row cursor-pointer bg-slate-700  px-4 py-2 rounded-lg item items-center justify-center  place-content-end text-white text-2xl hover:scale-125 shadow-sm shadow-slate-400"
       >
-        <img src="/carts.ico" className="h-8 w-8" />
+        <Image src="/carts.ico" alt="" height={32} width={32}/>
         <span className=" ml-2">Cart</span>
       </div>
       <div
