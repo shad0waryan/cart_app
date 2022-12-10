@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, MutableRefObject } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { useRef } from "react";
+
 import {
   AiOutlineMinusCircle,
   AiOutlinePlusCircle,
@@ -7,7 +9,6 @@ import {
   AiFillPlusCircle,
   AiFillCloseCircle,
 } from "react-icons/ai";
-import { useRef } from "react";
 const Navbar = ({
   key,
   cart,
@@ -20,14 +21,14 @@ const Navbar = ({
 
   const toggleCart = () => {
     if (ref.current.classList.contains("translate-x-full")) {
-      ref.current..classList.remove("translate-x-full");
+      ref.current.classList.remove("translate-x-full");
       ref.current.classList.add("translate-x-0");
     } else if (!ref.current.classList.contains("translate-x-full")) {
       ref.current.classList.remove("translate-x-0");
       ref.current.classList.add("translate-x-full");
     }
   };
-  const ref = useRef("translate-x-full");
+  const ref = useRef() as MutableRefObject<HTMLDivElement>;
   return (
     <div className="bg-black justify-between flex items-center p-3 sticky  z-10 shadow-md">
       <div className=" text-white item text-2xl flex items-center">
