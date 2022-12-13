@@ -39,7 +39,7 @@ const Navbar = ({
       </div>
       <Disclosure>
         <Disclosure.Button className="absolute right-8 inline-flex items-center peer justify-center rounded-md text-gray-800 hover:bg-gray-900 hover:text-white ">
-          <div className="flex flex-row cursor-pointer bg-slate-400  px-4 py-2 rounded-lg item items-center justify-center  place-content-end text-white text-2xl hover:scale-125 shadow-sm shadow-slate-100 box-shadow-md">
+          <div className="flex flex-row cursor-pointer bg-slate-400  px-4 py-2 rounded-lg item items-center justify-center  place-content-end text-white text-2xl hover:scale-125">
             <Image src="/carts.ico" alt="" height={32} width={32} />
             <span className="ml-2">Cart</span>
           </div>
