@@ -16,7 +16,6 @@ export default function Home() {
       localStorage.clear();
     }
   }, []);
-
   const saveCart = (myCart) => {
     localStorage.setItem("cart", JSON.stringify(myCart));
     let subt = 0;
